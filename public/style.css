@@ -4,11 +4,16 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Inter", sans-serif;
   background-color: #f3f3f3;
   color: #000;
   padding: 25px 120px;
+  padding-top: 180px;
 }
 
 ul {
@@ -26,15 +31,35 @@ header {
 
 /* Navbar */
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 160px;
+  margin-bottom: 130px;
+  padding: 10px 120px;
+  background-color: #f3f3f3;
+  border-bottom: 5px solid #000;
 }
 
 .navbar .nav-links {
   display: flex;
   gap: 20px;
+}
+
+.navbar .nav-links a {
+  transition:
+    color 0.3s ease,
+    font-weight 0.1s ease;
+  color: #848484;
+}
+
+.navbar .nav-links a:hover {
+  color: #000;
 }
 
 .navbar .logo a {
@@ -50,9 +75,10 @@ header {
 
 .hero .intro_1 h1 {
   font-size: 45px;
+  line-height: 50px;
 }
 
-span:before {
+.greetings:before {
   content: "Hello";
   animation: animate infinite 10s;
 }
@@ -136,7 +162,7 @@ span:before {
   outline: none;
 }
 
-.hero .question-button {
+.hero #send-button {
   border: none;
   background: black;
   color: white;
@@ -144,6 +170,27 @@ span:before {
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s ease;
+}
+
+.hero #response-container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  max-width: 500px;
+  width: 90%;
+  transition: all 0.3s ease;
+}
+
+#response-text {
+  color: #444;
+  font-size: 16px;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
 }
 
 /* Hamburger Menu */
@@ -176,6 +223,7 @@ span:before {
 
 /* About Section */
 .about {
+  padding-top: 100px;
   margin-bottom: 120px;
 }
 
@@ -205,6 +253,7 @@ span:before {
 
 /* Experience Section */
 .experience {
+  padding-top: 100px;
   margin-bottom: 120px;
 }
 

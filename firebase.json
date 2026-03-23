@@ -1,10 +1,15 @@
 {
   "hosting": {
     "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  }
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "disallowLegacyRuntimeConfig": true,
+      "ignore": ["venv", ".git", "firebase-debug.log", "firebase-debug.*.log", "*.local", "service_account.json", "tests", "__pycache__"],
+      "runtime": "python313"
+    }
+  ]
 }

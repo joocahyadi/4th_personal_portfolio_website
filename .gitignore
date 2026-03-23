@@ -67,3 +67,14 @@ node_modules/
 
 # dataconnect generated files
 .dataconnect
+
+# functions
+functions/tests/
+functions/__pycache__/
+functions/venv/
+
+# service account
+functions/tests/service_account.json
+
+# firebase
+.firebase/

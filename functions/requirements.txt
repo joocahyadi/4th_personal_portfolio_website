@@ -1,0 +1,4 @@
+firebase-functions>=0.5.0
+google-genai>=0.3.0
+firebase-admin>=6.0.0
+protobuf>=3.19.0
