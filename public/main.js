@@ -26,7 +26,7 @@ async function askAI() {
 
     // Display actual AI response
     // responseText.innerText = result.data.text;
-    responseText.innerHTML = marked.parse(result.data.text);
+    responseText.innerHTML = marked.parse(result.data.text.replace(/\n\n/g, "<br><br>"));
   } catch (error) {
     console.error("Error: ", error);
     responseText.innerText = "Sorry, I couldn't connect right now. Please try again later!";

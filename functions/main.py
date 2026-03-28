@@ -25,7 +25,7 @@ def ask_ai(req: https_fn.Request) -> https_fn.Response:
     
     try:
 
-        # Step 1: Authentication to access Gemini
+        # --- Step 1: Authentication to access Gemini ---
         api_key = os.environ.get('GEMINI_API_KEY')
 
         if not api_key:
@@ -69,10 +69,10 @@ def ask_ai(req: https_fn.Request) -> https_fn.Response:
                     'If the answer is not in the data, then politely say you do not have that information yet, and ask the user to directly contact Joshia.'
                     'Do not be too stiff. You can have a more cheerful personality.'
                     'When answering questions, you MUST follow this 3 part structure separated by double line breaks:'
-                    '1. Opening: A friendly, one-sentence acknowledgment of the user"s question.'
-                    '2. Content: The detailed answer based on the provided database. Use multiple sentences and keep it engaging.'
+                    '1. Opening: A friendly, one-sentence acknowledgment of the user"s question. <double break>'
+                    '2. Content: The detailed answer based on the provided database. Use multiple sentences and keep it engaging. <double break>'
                     '3. Closing: A call to action (can add one or two emojis) or a relevant link (if available).'
-                    'CRITICAL: Use a completely blank line between these three sections. Do not use labels like "Opening:" or "Content:" in the actual response.'
+                    'CRITICAL: Do not use labels like "Opening:" or "Content:" in the actual response.'
                     'Always prioritize the provided CONTEXT. If the context conflicts with your prior knowledge, the context is the absolute truth.'
                 )
             }
